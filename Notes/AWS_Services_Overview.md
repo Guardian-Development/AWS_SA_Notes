@@ -2,7 +2,8 @@
 Overview of AWS and the services it offers. Sections needed for the Solutions Associate exam are marked with a tick. 
 
 ## AWS Infrastructure 
-- [x]
+- [x] Required
+
 - A region: is a geographical area, consisting of 2 or more availability zones. 
 - An availability zone: is simple 1 or more data centre's, that have seperate power, networking, etc so they fail independently. 
 - Edge locations: are endpoints used for caching content, typically consisting of CloudFront and Amazon Content Delivery services. For instance, a response to a request from Sydney to London can be cached at an edge location in Australia in order to reduce the distance of further calls. 
