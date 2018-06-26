@@ -21,4 +21,5 @@ Manager users and their levels of access to the AWS console.
 - You can add permissions directly to users, without using groups, if desired. 
 - IAM exists outside of regions. 
 - Root account is account used when initially setting up the AWS account. You should always setup multi-factor authentication on your root account.
+- Power User Access: gives access to all AWS services except for managements of groups and users within IAM. 
 
