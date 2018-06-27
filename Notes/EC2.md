@@ -47,4 +47,20 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
 - All inbound traffic is blocked by default.
 - All outbound traffic is allowed by default. 
 - You can have any number of EC2 instances within a Security Group. 
-- You can only specify allow rules, you cannot specify deny rules. 
+- You can only specify allow rules, you cannot specify deny rules.
+## Upgrading EBS Volumes 
+- EBS volumes have to be in the same availability zone as the EC2 instance that mounts them. 
+- You can modify a volume of any type other than magnetic storage. 
+- To move a volume to another availablity zone: 
+    1. Take a snapshot of the volume.
+    2. Go to snapshots and select it. 
+    3. Actions -> Create Volume. Then you can change the volume type and its availability zone. 
+- You can copy snapshots to other regions. From a snapshot, you can then create another imgae, which provides an EBS and creates an AMI, which can then be launched. 
+- An AMI can then be moved between regions. 
+- Volumes exist on EBS and are just a virtual hard disk. 
+- Snapshots exist in S3, and are a point-in-time copy of the volume. 
+- Snapshots are incremental and only record the block that have changed since the previous snapshot. 
+- You can create AMI's and snapshhots while the original image is still running.
+- You can change the EBS volume size and type on the fly. 
+- Snapshots of encrypted volumes are encrypted automatically. 
+- Can only share snapshots with others publicly if they are not encrypted. 
