@@ -25,3 +25,14 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
 - Throughput Optimised HDD (ST1): used for Big Data, Data Warehousing, Log Processing. This cannot be used as a boot volume. 
 - Cold HDD (SC1): lowest cost storage for infrequent access workloads e.g. file server. This cannot be used as a boot volume.
 - Magnetic (Standard): lowest cost per gigabyte that is bootable. Good for infrequent access, or where low storage cost is important. 
+## Notes for when Creating EC2 Instances
+- AMI: amazon machine imahe. 
+- 1 subnet can only span 1 availability zone. 
+- EBS is deleted when its attached EC2 instance in temrinated by default. 
+- A volume is a virtual hard disk, with root being the bootable device.
+- A security group is a virtual firewall.
+- There are 2 types of runtime checks that can be performed on an EC2 instance: 
+    1. System Status Checks: checks instance is reachable by checking network packets are able to contact instance. 
+    2. Instance Status Checks: checks that it can get traffic to the instance operating system. 
+- Can't encrypt the default root device volumes provided by Amazon. Can use 3rd party software, or create your own AMI. Additional volumes can be encrypted.
+- Termination protection is turned off by default. 
