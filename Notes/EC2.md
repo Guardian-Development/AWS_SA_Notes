@@ -36,3 +36,15 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
     2. Instance Status Checks: checks that it can get traffic to the instance operating system. 
 - Can't encrypt the default root device volumes provided by Amazon. Can use 3rd party software, or create your own AMI. Additional volumes can be encrypted.
 - Termination protection is turned off by default. 
+## Security Groups
+- Security groups are virtual firewalls.
+- 1 EC2 instance can have multiple security groups assigned to it.
+- Inbound Rules: applied to packets going in to the EC2 instance.
+- Outbound Rules: applied to packets leaving the EC2 instance.
+- Any change to a security group is applied immediatly.
+- Security groups are stateful: anything you allow inbound will be automatically allowed outbound. Allow input traffic for TCP on port 80, automatically allows outbound TCP traffic on port 80. 
+- Default security group allows all traffic on all ports to any other instance within the security group. 
+- All inbound traffic is blocked by default.
+- All outbound traffic is allowed by default. 
+- You can have any number of EC2 instances within a Security Group. 
+- You can only specify allow rules, you cannot specify deny rules. 
