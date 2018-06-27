@@ -6,3 +6,4 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [IAM Service](Notes/IAM.md)
 - [S3 Storage](Notes/S3.md)
 - [CloudFront](Notes/CloudFront.md)
+- [Storage Gateway](Notes/Storage_Gateway.md)
