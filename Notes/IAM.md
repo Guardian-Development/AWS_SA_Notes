@@ -26,4 +26,5 @@ Manager users and their levels of access to the AWS console.
 - All roles are global and cannot be created for a specific region. 
 - AWS roles are associated to EC2/resource which means you don't need to login with user credentials to perform actions. The instance itself has its list of priveledges. 
 - Roles are powerful as they permission the resource not the user, and are therefore isolated if a resource is compromised. 
+- You can attach a role to an EC2 instance while it is running, through the command line or in the console (this use to not be the case).
 

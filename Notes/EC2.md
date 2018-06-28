@@ -97,3 +97,7 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
 - EBS backed instances can be stopped. You will not loose data on instance if it is stopped. 
 - You can reboot both types of instance. 
 - By default, both root volumes are deleted on termination, however EBS volumes you can tell AWS to keep the root device. 
+## EC2 Instance Metadata
+- To get meta-data on your EC2 instance, from within the instance:
+    - curl http://169.254.169.254/latest/meta-data/
+- This is RESTful so you can then use the resulting list of properties to make further calls to get the information about the EC2 instance, for instance /public-ip.
