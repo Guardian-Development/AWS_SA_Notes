@@ -10,6 +10,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [Snowball](Notes/Snowball.md)
 - [EC2](Notes/EC2.md)
 - [ELB](Notes/Elastic_Load_Balancers.md)
+- [CloudWatch](Notes/CloudWatch.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
