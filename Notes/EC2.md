@@ -64,3 +64,36 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
 - You can change the EBS volume size and type on the fly. 
 - Snapshots of encrypted volumes are encrypted automatically. 
 - Can only share snapshots with others publicly if they are not encrypted. 
+## Raid, Volumes and Snapshots
+- RAID: redundant array of independent disks. 
+    - RAID 0: striped, no redundancy, good performance. 
+    - RAID 1: mirrored, redundancy. 
+    - RAID 5: good for reads, bad for writes, not reccommended by AWS on EBS. 
+    - RAID 10: striped and mirrored, good for redundancy and performance. 
+- To improve I/O you use RAID. 
+- To take snapshot of RAID array:
+    - Problem is you need to flush the application cache to disk, which you do by stopping the application from writing to disk. 
+    - You can do this by freezing the file system, unmounting the RAID array or shutting down the EC2 instance. 
+## Encrypt Root Device Volumes and Snapshots
+1. Stop the instance.
+2. Create snapshot of root volume. 
+3. You can then copy the snapshot to an AMI, and there is an option to encrypt the copy. 
+4. You can then see the copy as an AMI and use it as the boot device for EC2 instances.
+- Encrypted AMI's (at rest) are always private as the key is held witin your AWS account for decryption.
+- Snapshots of encrypted volumes are encrypted automatically. 
+- Volumes restored from encrypted snapshots are encyrpted automatically. 
+## AMI Types
+- You can select AMI's based on: 
+    - Region.
+    - Operating System. 
+    - Architecture (32 bit, 64 bit).
+    - Launch permissions. 
+    - Storage for root device. 
+        - Instance store (EPHEMERAL STORAGE). 
+        - EBS backed volumes. 
+- For EBS volumes: the root device for an instance launched from this AMI is an EBS volume created from an EBS snapshot. 
+- For instance store: the root device for an instance launched from this AMI is an instance store volume created from a template held within S3. 
+- Instance store volumes cannot be stopped. If underlying host fails, you will loose all your data. 
+- EBS backed instances can be stopped. You will not loose data on instance if it is stopped. 
+- You can reboot both types of instance. 
+- By default, both root volumes are deleted on termination, however EBS volumes you can tell AWS to keep the root device. 
