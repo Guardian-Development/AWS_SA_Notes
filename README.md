@@ -9,6 +9,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [Storage Gateway](Notes/Storage_Gateway.md)
 - [Snowball](Notes/Snowball.md)
 - [EC2](Notes/EC2.md)
+- [EC2 Autoscaling Groups](Notes/EC2_Autoscaling_Groups.md)
 - [ELB](Notes/Elastic_Load_Balancers.md)
 - [CloudWatch](Notes/CloudWatch.md)
 
