@@ -101,3 +101,11 @@ Creates storage volumes and attach them to EC2 instances. Once attatched, can cr
 - To get meta-data on your EC2 instance, from within the instance:
     - curl http://169.254.169.254/latest/meta-data/
 - This is RESTful so you can then use the resulting list of properties to make further calls to get the information about the EC2 instance, for instance /public-ip.
+## EC2 Placement Groups
+- Clustered Placement Groups: grouping of instances within a single availability zone. Recommended for applications that need low network latency, high throughput, or both. 
+- Spread Placement Groups: a group of instances that are each placed on distinct underlying hardware. Recommended for applications that have a small number of critical instances that should be kept seperate from each other. This can span multipe availability zones.
+- Only certain types of instance can be launched into a placement group.
+- Names of placement groups must be unique for your AWS account. 
+- AWS recommends that all instances in the placement group are the same type (homogenous). 
+- You can't merge placement groups. 
+- You can't move existing instances into placement groups. You can create an AMI from the existing instance, then launch a new instance from that AMI into the placement group. 
