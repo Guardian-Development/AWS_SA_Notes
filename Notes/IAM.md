@@ -22,4 +22,8 @@ Manager users and their levels of access to the AWS console.
 - IAM exists outside of regions. 
 - Root account is account used when initially setting up the AWS account. You should always setup multi-factor authentication on your root account.
 - Power User Access: gives access to all AWS services except for managements of groups and users within IAM. 
+## IAM Roles
+- All roles are global and cannot be created for a specific region. 
+- AWS roles are associated to EC2/resource which means you don't need to login with user credentials to perform actions. The instance itself has its list of priveledges. 
+- Roles are powerful as they permission the resource not the user, and are therefore isolated if a resource is compromised. 
 
