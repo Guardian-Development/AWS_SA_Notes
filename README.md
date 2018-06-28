@@ -14,6 +14,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [ELB](Notes/Elastic_Load_Balancers.md)
 - [CloudWatch](Notes/CloudWatch.md)
 - [Lambda](Notes/Lambda.md)
+- [Route53](Notes/Route53.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
