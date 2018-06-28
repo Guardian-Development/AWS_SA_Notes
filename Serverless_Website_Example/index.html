@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function sendAPIRequest() {
+                var http = new XMLHttpRequest(); 
+                http.onreadystatechange = function() {
+                    if(this.readyState === 4 && this.status === 200) {
+                        document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                }
+                http.open("GET", "API_GATEWAY_URL", true);
+                http.send();
+            }
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <h1>Hello World!</h1>
+            <button onclick="sendAPIRequest()">Send Lambda Request!</button>
+            <h2 id="my-demo">........</h2>
+        </div>
+    </body>
+</html>
