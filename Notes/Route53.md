@@ -1,5 +1,5 @@
 # Route53
-Route53 is Amazons hosted DNS resolver. You can register and buy domain names from them. 
+Route53 is Amazons hosted DNS resolver. You can register and buy domain names from them. This is a global service.
 ## DNS Information
 - Domain Registrars: is an authority that can assign a domain name directly under 1 or more top level domains. Domains are registered with InterNIC a service of ICANN, which enforces uniqeuness of domain names. Each domain then becomes registered in the WhoIS database. 
 ### SOA Records Store
@@ -24,3 +24,11 @@ Route53 is Amazons hosted DNS resolver. You can register and buy domain names fr
 - Alias record requests with Route53 are free, CNAMES etc are not. So nearly always want to use them. 
 ## Simple Routing Policy
 - Default when you create a new record set. Most commonly used when you have a single resource that performs a given function. 
+## Weighted Routing Policy
+- Allows you to split your traffic based on different weights assigned. For instance 10% of traffic go to an ELB in US-EAST-1 with the rest going to EU-WEST-1. 
+## Latency Routing Policy
+- Route traffic based on the lowest network latency for your end user (which region gives them the fastest response time). 
+## Failover Routing Policy
+- Used for creating an active/passive setup. Primary site could be in EU-WEST-1 with secondary in EU-EAST-1 as a disaster recovery site. Route53 will use health checks to monitor your sites. 
+## Geolocation Routing Policy
+- Route traffic based on the location of users. So UK customers are routed to EU-WEST-1 instances for example. 
