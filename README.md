@@ -17,6 +17,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [Route53](Notes/Route53.md)
 - [RDS](Notes/RDS.md)
 - [DynamoDB](Notes/DynamoDB.md)
+- [RedShift](Notes/RedShift.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
