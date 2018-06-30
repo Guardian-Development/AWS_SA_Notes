@@ -1,0 +1,54 @@
+# Virtual Private Cloud (VPC)
+A virtual data centre in the cloud. Lets you provision logically isolated sections of your AWS cloud. You have complete control over the envioronment, including setting up your own IP ranges, subnets, and configuration of route tables and network gateways. 
+## Features
+- 1 subnet can only be in 1 availability zone. 
+- VPC can be accessed either through an internet gateway of a virtual private gateway. Traffic hits a router inside the VPC, which is then routes to the right subnet by going through a route table and then through a network access control list. Your instances then sit inside a subnet. 
+- Subnets then have different network address ranges, allowing you to assign custom IPs to different subnets. 
+- You can then configure route tables between subnets. 
+- You can create an internet gateway and attach it to a VPC (can only have 1 per VPC). 
+- This gives you much better security controls over AWS resources. 
+- Security groups are then able to span subnets.
+- Security groups do not span VPCs. 
+- Subnet network access control lists can then decide which subnets are able to communicate. 
+- Security groups are stateful, whereas network access control lists are stateless. 
+- 10.0.0.0/16 gives you the largest address space in VPC. 
+- You loose 5 IP addresses in range due to Amazon reserving them for different reasons. 
+## Default VPC vs Custom VPC
+- Default is user friendly. 
+- All subnets in default VPC have a route out to the internet. 
+- Each instance in the default VPC gets assigned a public and private IP address. In a custom VPC, if there is no interent access the instances only get assigned private IPs. 
+## VPC Peering
+- Connect one VPC with another via a direct network route, using private IP addresses. 
+- Instances behave as if they are on the same private network. 
+- Can peer with other AWS accounts. 
+- Peering is in a star configuration: 1 central VPC peers with 4 others, there is no transitive peering. This means no routing through intermediate VPCs. If you need to talk to a VPC you have to directly peer with it. 
+## NAT Instances and NAT Gateways 
+- On NAT instances, you must disable source/destination checks. 
+- In routing table you add a route out with the destination being all addresses, and target being the NAT instance. 
+- NAT instance is basically a jump box for a private subnet, that can be used to route traffic through. 
+- NAT Gateway sits in public subnet. Then a route is created that allows private instances to speak to the NAT gateway. This allows them to talk to the internet. This works as the NAT gateway is in a subnet that is connected to the internet. 
+### NAT Instances 
+- Must be in a public subnet. 
+- Must be route from public subnet to private subnet. 
+- Amount of traffic that can be supported depends on the size of the NAT instance. 
+- Can create high availability using auto scaling groups. 
+- Sits behind a security group. 
+### NAT Gateways 
+- Preferred by enterprise. 
+- Scale automatically up to 10Gbps. 
+- No need to patch. 
+- Not associated with security groups. 
+- Auto assigned a public IP address.
+- Remember to update route tables. 
+- More secure than a NAT instance. 
+## Network Access Control Lists and Security Groups
+- Can only ever have 1 subnet associated with 1 NACL. 
+- By default NACL deny everything. 
+- Ephemeral ports: post used for client after initial handshake to transfer data over. 
+- Rules are evaluated in numerical order. 
+- VPC automatically comes with default NACL which allows all inbound/outbound traffic. 
+- Each subnet must be associated with a NACL, if not it is associated with the default. 
+- NACL can be associated to multiple subnets, but each subnet can only have 1 NACL. 
+- Network ACLS have seperate inbound and outbound rules and are stateless, remeber to open outbound rules for ephemeral ports. 
+- Block IPs using NACL not security groups. 
+- NACL are evaluated before security groups. 
