@@ -23,6 +23,8 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [VPC](Notes/VPC.md)
 - [SQS](Notes/SQS.md)
 - [SWS](Notes/SWS.md)
+- [SNS](Notes/SNS.md)
+- [Elastic Transcoder](Notes/Elastic_Transcoder.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
