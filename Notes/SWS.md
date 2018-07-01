@@ -2,6 +2,7 @@
 Is a web service that coordinates work across distributed application components. Allows applications to be designed as a coordinated set of tasks. 
 - Tasks represent invocations of various processing steps in an application. 
 - SWF workflows are programs that interact with SWF to get tasks, process received tasks, and returns the results. 
+- 3 types of workflow actors: starters, deciders and workers. 
 - SWF decider is a program that controls the coordination of tasks (ordering, concurrency, scheduling). 
 - SWF brokers the interaction between workers and deciders, giving the decider a consistent view into the progress of tasks and to initiate new tasks. 
 - SWF stores tasks, assigns them to workers and deciders, giving the decider a consitent view into the progress of tasks and to initiate new tasks. 
