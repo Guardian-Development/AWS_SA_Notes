@@ -26,6 +26,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [SNS](Notes/SNS.md)
 - [Elastic Transcoder](Notes/Elastic_Transcoder.md)
 - [API Gateway](Notes/API_Gateway.md)
+- [Kinese](Notes/Kinesis.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
