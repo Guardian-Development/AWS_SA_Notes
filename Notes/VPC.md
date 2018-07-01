@@ -69,3 +69,11 @@ A virtual data centre in the cloud. Lets you provision logically isolated sectio
     - Traffic for instance meta data.
     - DHCP traffic. 
     - Traffic to reserved IP address for the default VPC router. 
+## NATs vs Bastions
+- NAT instance is behind a security group, NAT gateways are not. 
+- A NAT is used to provide internet traffic to EC2 instances in private subnets. 
+- A Bastion is used to securely administer EC2 instances, using SSH or RDP in private subnets (jump box). 
+- To make them highly available, have 2 public subnets and use autoscaling groups and then use Route53 an health checks to keep them alive. 
+## VPC Endpoints
+- Provides a way of talking to other AWS services without going out over the internet. You do not need a NAT. 
+- You add an endpoint to your desired service, such as S3, and this creates a route in your subnet routing table. 
