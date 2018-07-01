@@ -6,6 +6,7 @@ Web service that makes it easy to setup, operae and send notifications from the 
 - Can group multiple recipients using topics. One topic can support delivery to multiple end point types. e.g. Android and SMS. 
 - All messages published to SNS are stored redundantly across multiple availability zones. 
 - Mostly used around auto scaling groups, triggering notifications when instances are added or removed etc. 
+- Supported subscribers: HTTP, HTTPS, Email, Email-JSON, SQS, Application, Lambda. 
 ## Benefits
 - Push based delivery system (no polling). 
 - Simple APIs and easy to integrate. 
