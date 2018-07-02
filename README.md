@@ -31,7 +31,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 # Architecting AWS Solutions
 - [AWS Best Practices](Notes/AWS_Best_Practices.md)
 - [AWS Well Architected Framework](Notes/Well_Architected_Framework.md)
-    - [Security Pillar](Notes/Security_Pillar.md)
+    - [Security](Notes/Security_Pillar.md)
     - [Reliability](Notes/Reliability_Pillar.md)
     - [Performance Efficient](Notes/Performance_Efficiency_Pillar.md)
     - [Cost Optimisation](Notes/Cose_Optimisation_Pillar.md)
