@@ -28,6 +28,9 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [API Gateway](Notes/API_Gateway.md)
 - [Kinese](Notes/Kinesis.md)
 
+# Architecting AWS Solutions
+- [AWS Best Practices](Notes/AWS_Best_Practices.md)
+
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
 - [Serverless Website Example](Serverless_Website_Example/)
