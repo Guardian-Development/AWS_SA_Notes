@@ -34,6 +34,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
     - [Security Pillar](Notes/Security_Pillar.md)
     - [Reliability](Notes/Reliability_Pillar.md)
     - [Performance Efficient](Notes/Performance_Efficiency_Pillar.md)
+    - [Cost Optimisation](Notes/Cose_Optimisation_Pillar.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
