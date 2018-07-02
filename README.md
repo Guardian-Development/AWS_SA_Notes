@@ -33,6 +33,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [AWS Well Architected Framework](Notes/Well_Architected_Framework.md)
     - [Security Pillar](Notes/Security_Pillar.md)
     - [Reliability](Notes/Reliability_Pillar.md)
+    - [Performance Efficient](Notes/Performance_Efficiency_Pillar.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
