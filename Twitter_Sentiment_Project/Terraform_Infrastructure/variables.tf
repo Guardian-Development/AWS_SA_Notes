@@ -33,7 +33,9 @@ variable "kinesis_stream_name" {
 }
 
 # Twitter Consumer Variables
-
 variable "twitter_consumer_source_jar_path" {
   default = "/Users/joe.honour/AWS_SA_Notes/Twitter_Sentiment_Project/Twitter_Consumer/target/Twitter_Consumer-1.0-SNAPSHOT.jar"
+}
+variable "tweets_table_name" {
+  default = "Tweets"
 }

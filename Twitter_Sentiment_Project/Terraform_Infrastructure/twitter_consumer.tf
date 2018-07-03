@@ -13,6 +13,8 @@ resource "aws_lambda_function" "tweet_sentiment_analysis_function" {
       lambdaAccessKey = "${var.access_key}"
       lambdaSecretKey = "${var.secret_key}"
       lambdaComprehendRegion = "eu-west-1"
+      lambdaDynamoRegion = "${var.region}"
+      lambdaDynamoTweetsTableName = "${var.tweets_table_name}"
     }
   }
 
@@ -28,5 +30,3 @@ resource "aws_lambda_event_source_mapping" "kinesis_lambda_event_mapping" {
   function_name = "${aws_lambda_function.tweet_sentiment_analysis_function.arn}"
   starting_position = "TRIM_HORIZON"
 }
-
-//TODO: save result of tweet and sentiment analysis in DynamoDB.
