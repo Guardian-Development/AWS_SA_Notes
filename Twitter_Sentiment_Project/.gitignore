@@ -106,4 +106,5 @@ buildNumber.properties
 
 secrets.tfvars
 twitter.properties
+twitter4j.properties
 .idea/

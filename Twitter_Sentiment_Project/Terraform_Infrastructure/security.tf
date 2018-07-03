@@ -15,6 +15,7 @@ resource "aws_security_group" "ec2-inbound-traffic" {
   }
 }
 
+# Lambda execution roles to allow talking to Kinesis
 resource "aws_security_group" "ec2-outgoing-traffic" {
   name = "Allow all network traffic outbound"
 
@@ -29,4 +30,32 @@ resource "aws_security_group" "ec2-outgoing-traffic" {
     Name = "Allow all network outbound"
     Deployment = "${var.deployment_tag}"
   }
+}
+
+resource "aws_iam_role" "lambda_execution_role" {
+  name = "kinesis_streamer_iam_role"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy_attachment" "execute_lambda_policy" {
+  role = "${aws_iam_role.lambda_execution_role.id}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+resource "aws_iam_role_policy_attachment" "execute_kinesis_policy" {
+  role = "${aws_iam_role.lambda_execution_role.id}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole"
 }

@@ -10,7 +10,7 @@ import twitter4j.TwitterStreamFactory;
  *      - awsKinesisAccessKey
  *      - awsKinesisSecretKey
  *      - awsKinesisStreamName
- *  Under the resource folder create a file called twitter.properties, this should then contain:
+ *  Under the resource folder create a file called twitter4j.properties, this should then contain:
  *      - oauth.consumerKey
  *      - oauth.consumerSecret
  *      - oauth.accessToken
@@ -29,6 +29,6 @@ public class Main
                         System.getenv("awsKinesisStreamName")));
 
         twitterStream.addListener(listener);
-        twitterStream.sample();
+        twitterStream.sample("en");
     }
 }

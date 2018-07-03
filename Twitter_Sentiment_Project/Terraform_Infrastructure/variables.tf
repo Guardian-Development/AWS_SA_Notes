@@ -1,3 +1,4 @@
+# AWS Configuration Variables
 variable "access_key" {}
 variable "secret_key" {}
 
@@ -8,7 +9,7 @@ variable "deployment_tag" {
   default = "dev"
 }
 
-# Twitter Source Variables
+# Twitter Producer Variables
 variable "twitter_source_instance_ami" {
   # Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type
   default = "ami-e4515e0e"
@@ -26,8 +27,15 @@ variable "twitter_source_jar_path" {
   default = "/Users/joe.honour/AWS_SA_Notes/Twitter_Sentiment_Project/Twitter_Producer/target/TwitterProducer-1.0-SNAPSHOT-jar-with-dependencies.jar"
 }
 
+# Kinesis Vairables
 variable "kinesis_stream_name" {
   default = "TweetsStream"
+}
+
+# Twitter Consumer Variables
+
+variable "twitter_consumer_source_jar_path" {
+  default = "/Users/joe.honour/AWS_SA_Notes/Twitter_Sentiment_Project/Twitter_Consumer/target/Twitter_Consumer-1.0-SNAPSHOT.jar"
 }
 
 //TODO: remove the check in of the twitter.properties file.

@@ -3,6 +3,7 @@ package BJSS.aws_training;
 import twitter4j.*;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,7 +26,9 @@ public class TweetStatusListener implements StatusListener
                     .map(HashtagEntity::getText)
                     .collect(Collectors.toList());
 
-            provideDownstreamAnalysis.postMessageForAnalysis(new Tweet(userId, body, hashTags));
+            Date createdDate = status.getCreatedAt();
+
+            provideDownstreamAnalysis.postMessageForAnalysis(new Tweet(userId, body, createdDate, hashTags));
         }
     }
 
