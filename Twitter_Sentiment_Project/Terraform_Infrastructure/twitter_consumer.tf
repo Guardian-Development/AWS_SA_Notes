@@ -4,7 +4,21 @@ resource "aws_lambda_function" "tweet_sentiment_analysis_function" {
   role = "${aws_iam_role.lambda_execution_role.arn}"
   handler = "KinesisTweetEventHandler"
   runtime = "java8"
-  source_code_hash = "${base64sha256(file(${var.twitter_consumer_source_jar_path}))}"
+  timeout = 30
+  memory_size = 256
+  source_code_hash = "${base64sha256(file(var.twitter_consumer_source_jar_path))}"
+
+  environment {
+    variables = {
+      lambdaAccessKey = "${var.access_key}"
+      lambdaSecretKey = "${var.secret_key}"
+      lambdaComprehendRegion = "eu-west-1"
+    }
+  }
+
+  tags {
+    Deployment = "${var.deployment_tag}"
+  }
 }
 
 resource "aws_lambda_event_source_mapping" "kinesis_lambda_event_mapping" {
@@ -15,5 +29,4 @@ resource "aws_lambda_event_source_mapping" "kinesis_lambda_event_mapping" {
   starting_position = "TRIM_HORIZON"
 }
 
-//TODO: update function so that it calls sentiment analysis service.
 //TODO: save result of tweet and sentiment analysis in DynamoDB.

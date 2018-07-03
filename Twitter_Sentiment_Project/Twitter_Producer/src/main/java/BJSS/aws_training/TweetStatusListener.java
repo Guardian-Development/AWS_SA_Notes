@@ -18,6 +18,11 @@ public class TweetStatusListener implements StatusListener
 
     public void onStatus(Status status)
     {
+        if(status.isRetweet())
+        {
+            return;
+        }
+
         if(status.getHashtagEntities() != null && status.getHashtagEntities().length > 0)
         {
             String userId = String.valueOf(status.getUser().getId());

@@ -1,5 +1,6 @@
 package BJSS.aws_training;
 
+import twitter4j.FilterQuery;
 import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
@@ -29,6 +30,12 @@ public class Main
                         System.getenv("awsKinesisStreamName")));
 
         twitterStream.addListener(listener);
-        twitterStream.sample("en");
+
+        FilterQuery tweetFilterQuery = new FilterQuery(); // See
+        tweetFilterQuery
+                .track("Trump", "Politics", "Military")
+                .language("en");
+
+        twitterStream.filter(tweetFilterQuery);
     }
 }
