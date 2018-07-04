@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "tweet_sentiment_analysis_function" {
   filename = "${var.twitter_consumer_source_jar_path}"
   function_name = "Kinesis-Twitter-Consumer"
-  role = "${aws_iam_role.lambda_execution_role.arn}"
+  role = "${aws_iam_role.lambda_kinesis_execution_role.arn}"
   handler = "KinesisTweetEventHandler"
   runtime = "java8"
   timeout = 30

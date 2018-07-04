@@ -39,3 +39,8 @@ variable "twitter_consumer_source_jar_path" {
 variable "tweets_table_name" {
   default = "Tweets"
 }
+
+# API Gateway Variables
+variable "twitter_get_hashtags_source_jar_path" {
+  default = "/Users/joe.honour/AWS_SA_Notes/Twitter_Sentiment_Project/Twitter_API/target/Twitter_API-1.0-SNAPSHOT.jar"
+}
