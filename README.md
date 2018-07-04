@@ -28,6 +28,9 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [API Gateway](Notes/API_Gateway.md)
 - [Kinesis](Notes/Kinesis.md)
 - [ECS](Notes/ECS.md)
+- [Direct Connect](Notes/Direct_Connect.md)
+- [STS](Notes/Security_Token_Service.md)
+- [WorkSpaces](Notes/WorkSpaces.md)
 
 # Architecting AWS Solutions
 - [AWS Best Practices](Notes/AWS_Best_Practices.md)
@@ -44,9 +47,6 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [Cross Account Access](Notes/Cross_Account_Access.md)
 - [Resource Groups](Notes/Resource_Groups.md)
 - [VPC Peering](Notes/VPC_Peering.md)
-- [Direct Connect](Notes/Direct_Connect.md)
-- [Security Token Service](Notes/Security_Token_Service.md)
-- [WorkSpaces](Notes/WorkSpaces.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
