@@ -17,7 +17,7 @@ Grants users limited and tempoary access to AWS resources.
 - Identity Store: services like Facebook or AD.
 - Identities: a user of a service like Facebook or AD.
 ## Steps 
-![alt text](Images/STS_Workflow.png)
+![alt text](../Images/STS_Workflow.png)
 - Develop an identity broker to communicate with LDAP and AWS STS. 
 - Identity broker authenticates with LDAP then with AWS STS.
 - Application then gets temporaty access to AWS resources. 
