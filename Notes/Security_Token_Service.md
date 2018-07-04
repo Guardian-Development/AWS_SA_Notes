@@ -21,3 +21,6 @@ Grants users limited and tempoary access to AWS resources.
 - Develop an identity broker to communicate with LDAP and AWS STS. 
 - Identity broker authenticates with LDAP then with AWS STS.
 - Application then gets temporaty access to AWS resources. 
+## Active Directory Integration
+- Can sign in with AD using SAML. 
+- Authenticate against AD, pass authentication response to AWS SignIn, which then redirects you to logged in AWS console. 
