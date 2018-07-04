@@ -26,7 +26,8 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [SNS](Notes/SNS.md)
 - [Elastic Transcoder](Notes/Elastic_Transcoder.md)
 - [API Gateway](Notes/API_Gateway.md)
-- [Kinese](Notes/Kinesis.md)
+- [Kinesis](Notes/Kinesis.md)
+- [ECS](Notes/ECS.md)
 
 # Architecting AWS Solutions
 - [AWS Best Practices](Notes/AWS_Best_Practices.md)
