@@ -1,5 +1,4 @@
-# API Gateway 
-
+# API Gateway 
 Allows developers to publish, monitor, maintain and secure API's at scale. Acts a front door for applications to access data/backend services such as EC2 instances, AWS Lambda, or any web application. 
 ## API Caching
 - Can enable to cache your endpoints response. This reduces the number of calls to your endpoint and improves latency. 
