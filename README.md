@@ -37,6 +37,9 @@ Solutions Architect Associate Certification Notes to pass the exam.
     - [Cost Optimisation](Notes/Cose_Optimisation_Pillar.md)
     - [Operational Excellence](Notes/Operational_Excellence_Pillar.md)
 
+# Extra Notes
+- [Exam Tips](Notes/Exam_Tips.md)
+
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
 - [Serverless Website Example](Serverless_Website_Example/)
