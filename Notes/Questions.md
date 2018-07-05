@@ -1,0 +1,13 @@
+# Questions
+- What does an AWS Region consist of?
+    - An independent collection of AWS computing resources in a defined geography. 
+- When you add a rule to an RDS security group, you do not need to specify a port number or protocol? 
+    - False. must specify this. 
+- Can i move a reserved instance from one region to another? 
+    - No. 
+- Using a custom VPC and placing EC2 instances into public subnet, it will be automatically internet accessible? 
+    - False, must give it an elastic IP or assign ELB. 
+- When creating an RDS instance you can select which availability zone to deploy your instance? 
+    - True. 
+- Which services would you use to create a stateless application stack?
+    - RDS, DynamoDB, Elasticache.

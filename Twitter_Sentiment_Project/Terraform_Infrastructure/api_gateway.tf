@@ -52,9 +52,9 @@ resource "aws_api_gateway_integration" "tweet_get_hashtags_lambda_integration" {
 
 resource "aws_lambda_permission" "tweet_api_grant_hashtag_lambda_function_access_test_deployment" {
   statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
+  action = "lambda:InvokeFunction"
   function_name = "${aws_lambda_function.tweet_get_hashtags_function.arn}"
-  principal     = "apigateway.amazonaws.com"
+  principal = "apigateway.amazonaws.com"
   source_arn = "${aws_api_gateway_deployment.tweet_api_test_deployment_stage.execution_arn}/*/*"
 }
 
