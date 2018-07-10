@@ -77,3 +77,17 @@ A virtual data centre in the cloud. Lets you provision logically isolated sectio
 ## VPC Endpoints
 - Provides a way of talking to other AWS services without going out over the internet. You do not need a NAT. 
 - You add an endpoint to your desired service, such as S3, and this creates a route in your subnet routing table. 
+
+## Extra Notes
+- Security groups can span subnets. 
+- Security groups only exist in a single VPC.
+- Create security group that allows required port traffic from the public subnet range, then assign this to private instances that you want to talk to. 
+- Use route tables to create network a network route through a NAT (destination 0.0.0.0/0, target your private CIDR subnet). 
+- Security group operates at the instance level (first layer of defence) with allow rules only and all rules evaluated before execution decision. NACL operates at the subnet level (second layer of defence), supports allow and deny rules with rules being evaluated in numerical order. 
+- Default NACL allows all inbound and outbound traffic automatically. 
+- Security group can only allow ports from CIDR source ranges, no blocking and not granular. 
+- New NACL by default deny all traffic (opposite of default NACL used when no NACL is specified for a subnet). 
+- Always want Bastions in multiple subnets for high availability. Can use things like auto-scaling to make sure they are available.
+- 2 types of VPC endpoint: 
+    - Attach to single instance through elastic network interface. 
+    - Attach gateway endpoint, that can have a route created for it in the route table for all instances in the subnet. 
