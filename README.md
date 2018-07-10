@@ -47,6 +47,7 @@ Solutions Architect Associate Certification Notes to pass the exam.
 - [Cross Account Access](Notes/Cross_Account_Access.md)
 - [Resource Groups](Notes/Resource_Groups.md)
 - [VPC Peering](Notes/VPC_Peering.md)
+- [Exam Notes From Official Guide](Notes/Official_Guide_Exam_Notes.md)
 
 # Practicals 
 - [Static Website Hosting in S3](S3_Static_Website_Hosting/)
